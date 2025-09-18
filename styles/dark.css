@@ -3,18 +3,16 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-@media (prefers-color-scheme: dark) {
-    :root.theme-dark {
-    --brand-color: #db00ff;
-    --accent-color: #ff0070;
-    --subtitle-text-color: #ff0070;
-    --main-bg-color: #000028;
-    --main-title-color: #ff0070;
-    --main-bg-image: url(../images/cover-image-dark.png);
-    --main-content-element-text: #f1b2ce;
-    --titel-decor-color: #000028;
-    --header-decor-color: #ff0070;
-    --header-menu-button-hover-color: rgba(255, 0, 112, 0.4);
-    --header-menu-button-color: #ff0070;
-  }
-} 
+:root.theme-dark {
+  --brand-color: #db00ff;
+  --accent-color: #ff0070;
+  --subtitle-text-color: #ff0070;
+  --main-bg-color: #000028;
+  --main-title-color: #ff0070;
+  --main-bg-image: url(../images/cover-image-dark.png);
+  --main-content-element-text: #f1b2ce;
+  --titel-decor-color: #000028;
+  --header-decor-color: #ff0070;
+  --header-menu-button-hover-color: rgba(255, 0, 112, 0.4);
+  --header-menu-button-color: #ff0070;
+}
