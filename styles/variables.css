@@ -13,6 +13,10 @@
   --main-font-size: 18px;
   --line-height-default: 1.3;
   --brand-color: #db00ff;
+  --main-content-element-text: #f1b2ce; 
   --font-style-main: normal;
+  --header-decor-color: #ff0070;
+  --header-menu-button-hover-color: rgba(255, 0, 112, 0.4);
+  --header-menu-button-color: #ff0070;
   --font-size-title-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }

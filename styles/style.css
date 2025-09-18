@@ -1,7 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  padding: 10px;
+  padding-block-start: 10px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
   font-family: var(--font-family-main, "IBM Plex mono", sans-serif);
   background-color: var(--bg-color, #000028);
   background-image: var(--main-bg-image, url(../images/cover-image-dark.png));
@@ -25,8 +27,8 @@
   top: 10px;
   right: 10px;
   display: block;
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
-  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--header-decor-color, #ff0070);
+  border-block-start: 1px solid var(--header-decor-color, #ff0070);
   block-size: 25px;
   inline-size: 25px;
 }
@@ -37,8 +39,8 @@
   bottom: 10px;
   left: 10px;
   display: block;
-  border-inline-start: 1px solid var(--accent-color, #ff0070);
-  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-start: 1px solid var(--header-decor-color, #ff0070);
+  border-block-end: 1px solid var(--header-decor-color, #ff0070);
   block-size: 25px;
   inline-size: 25px;
 }
@@ -105,19 +107,19 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  outline: 1px solid var(--header-menu-button-hover-color, rgba(255, 0, 112, 0.4));
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color, #ff0070);
 }
 
 .header__theme-menu-button:focus {
   outline: none;
 }
 
-.header__theme-menu-button:focus-visible {
-  outline: 1px solid var(--accent-color, #ff0070);
-}
-
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color, #ff0070);
+  outline: 1px solid var(--header-menu-button-color, #ff0070);
 }
 
 .header__title {
@@ -171,7 +173,7 @@
 }
 
 .main__title {
-  color: var(--accent-color, #ff0070);
+  color: var(--subtitle-text-color, #ff0070);
   font-size: var(--main-font-size, 18px);
 }
 
@@ -182,9 +184,6 @@
 }
 
 .main__content__element {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
   color: var(--subtitle-text-color, #000028);
   font-family: var(--font-family-main, "IBM Plex Mono", sans-serif);
   font-weight: var(--font-weight-bold, 700);
@@ -202,8 +201,9 @@
 }
 
 .main__content__element__text {
-  color: #f1b2ce;
+  color: var(--main-content-element-text, #f1b2ce);
   font-weight: var(--font-weight-regilar, 400);
+  padding-block-start: 10px;
 }
 
 .main__content__element__text-link {
@@ -212,7 +212,7 @@
 }
 
 .main__content__element__text-link:hover {
-  border-block-end: 1px solid #f1b2ce;
+  border-block-end: 1px solid var(--main-content-element-text, #f1b2ce);
 }
 
 .main__content__element__text-link:focus {
@@ -220,7 +220,7 @@
 }
 
 .main__content__element__text-link:focus-visible {
-  outline: 1px solid #f1b2ce;
+  outline: 1px solid var(--main-content-element-text, #f1b2ce);
 }
 
 .main__content__element__subtitle__wrapper {
@@ -283,8 +283,8 @@
   top: 8px;
   right: 0;
   display: block;
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
-  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--header-decor-color, #ff0070);
+  border-block-start: 1px solid var(--header-decor-color, #ff0070);
   block-size: 25px;
   inline-size: 25px;
 }
@@ -295,15 +295,17 @@
   bottom: 13px;
   left: 0;
   display: block;
-  border-inline-start: 1px solid var(--accent-color, #ff0070);
-  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-start: 1px solid var(--header-decor-color, #ff0070);
+  border-block-end: 1px solid var(--header-decor-color, #ff0070);
   block-size: 25px;
   inline-size: 25px;
 }
 
 @media (width >= 768px) {
   .page {
-    padding: 20px;
+    padding-block-start: 20px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
   }
 
   .header::before {
@@ -394,6 +396,7 @@
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-block-start: 2px;
   }
 
   .footer::before {
@@ -406,4 +409,43 @@
 }
 
 @media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
+    margin-block-start: 0;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__title {
+    font-size: 157px;
+    padding-block-start: 4px;
+  }
+
+  .header__subtitle {
+    margin-block-start: 31px;
+  }
+
+  .main__section {
+    gap: 10px;
+  }
+
+  .main__title--section-2 {
+    max-inline-size: 30%;
+  }
+
+  .main__section--cols-2 {
+    gap: 20px;
+  }
+
+  .main__content_list--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .main__section__gallery {
+    gap: 20px;
+  }
 }
