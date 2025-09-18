@@ -50,8 +50,6 @@
   top: 10px;
   right: 38px;
   justify-self: end;
-  justify-self: end;
-  align-self: center;
   align-self: start;
   color: var(--accent-color, #ff0070);
   font-family: var(--font-family-main, "IBM Plex Mono");
@@ -175,7 +173,7 @@
 }
 
 .main__title {
-  color: var(--subtitle-text-color, #ff0070);
+  color: var(--main-title-color, #ff0070);
   font-size: var(--main-font-size, 18px);
 }
 
