@@ -148,7 +148,7 @@
 }
 
 .title-decor {
-  color: var(--subtitle-text-color, #000028);
+  color: var(--titel-decor-color, #000028);
   background-color: var(--accent-color, #ff0070);
   block-size: fit-content;
 }
@@ -184,7 +184,7 @@
 }
 
 .main__content__element {
-  color: var(--subtitle-text-color, #000028);
+  color: var(--main-content-element-text, #f1b2ce);
   font-family: var(--font-family-main, "IBM Plex Mono", sans-serif);
   font-weight: var(--font-weight-bold, 700);
   font-size: var(--main-font-size, 18px);
@@ -193,7 +193,7 @@
 }
 
 .main__subtitle {
-  color: var(--subtitle-text-color, #000028);
+  color: var(--titel-decor-color, #000028);
 }
 
 .main__subtitle--regular {
@@ -202,7 +202,6 @@
 
 .main__text {
   padding-block-start: 10px;
-  color: var(--main-content-element-text, #f1b2ce);
   font-weight: var(--font-weight-regilar, 400);
 }
 
