@@ -1,9 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  padding-block-start: 10px;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
+  padding-block-start: 10px;
   font-family: var(--font-family-main, "IBM Plex mono", sans-serif);
   background-color: var(--bg-color, #000028);
   background-image: var(--main-bg-image, url(../images/cover-image-dark.png));
@@ -70,7 +70,8 @@
   display: block;
   margin-inline-start: 10px;
   border-radius: 50%;
-  box-shadow: 0 0 4px var(--accent-color, #ff0070),
+  box-shadow:
+    0 0 4px var(--accent-color, #ff0070),
     0 0 8px var(--accent-color, #ff0070);
   background-color: var(--accent-color, #ff0070);
   transform: translate(0, -50%);
@@ -107,7 +108,8 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--header-menu-button-hover-color, rgba(255, 0, 112, 0.4));
+  outline: 1px solid
+    var(--header-menu-button-hover-color, rgba(255, 0, 112, 0.4));
 }
 
 .header__theme-menu-button:focus-visible {
@@ -177,7 +179,7 @@
   font-size: var(--main-font-size, 18px);
 }
 
-.main__content__list {
+.main__list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -192,48 +194,48 @@
   line-height: var(--line-height-default, 1.3);
 }
 
-.main__content__element__subtitle {
+.main__subtitle {
   color: var(--subtitle-text-color, #000028);
 }
 
-.main__content__element__subtitle--regular {
+.main__subtitle--regular {
   font-weight: var(--font-weight-regilar, 400);
 }
 
-.main__content__element__text {
+.main__text {
+  padding-block-start: 10px;
   color: var(--main-content-element-text, #f1b2ce);
   font-weight: var(--font-weight-regilar, 400);
-  padding-block-start: 10px;
 }
 
-.main__content__element__text-link {
+.main__text-link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.main__content__element__text-link:hover {
+.main__text-link:hover {
   border-block-end: 1px solid var(--main-content-element-text, #f1b2ce);
 }
 
-.main__content__element__text-link:focus {
+.main__text-link:focus {
   outline: none;
 }
 
-.main__content__element__text-link:focus-visible {
+.main__text-link:focus-visible {
   outline: 1px solid var(--main-content-element-text, #f1b2ce);
 }
 
-.main__content__element__subtitle__wrapper {
+.main__subtitle__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.main__section__gallery {
+.main__section_gallery {
   gap: 10px;
 }
 
-.main__title__gallery {
+.main__title_gallery {
   color: var(--subtitle-text-color, #000028);
   font-family: var(--font-family-main, "IBM Plex Mono", sans-serif);
   font-weight: var(--font-weight-bold, 700);
@@ -303,9 +305,9 @@
 
 @media (width >= 768px) {
   .page {
-    padding-block-start: 20px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
+    padding-block-start: 20px;
   }
 
   .header::before {
@@ -349,15 +351,15 @@
     grid-template-columns: 1fr 2fr;
   }
 
-  .main__section--cols-2 {
+  .main__section_cols_2 {
     grid-template-columns: 1fr;
   }
 
-  .main__title--section-2 {
+  .main__title_section-2 {
     max-inline-size: 20%;
   }
 
-  .main__section__gallery {
+  .main__section_gallery {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -375,28 +377,28 @@
     object-fit: cover;
   }
 
-  .main__gallery__item--wide {
+  .main__gallery__item_wide {
     grid-column: 1 / 3;
   }
 
-  .main__gallery__item--tall {
+  .main__gallery__item_tall {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
   }
 
-  .main__gallery__item--portrait {
+  .main__gallery__item_portrait {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
   }
 
-  .main__gallery__item--panorama {
+  .main__gallery__item_panorama {
     grid-column: 2 / 4;
     grid-row: 3;
   }
 
   .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-block-start: 2px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .footer::before {
@@ -420,8 +422,8 @@
   }
 
   .header__title {
-    font-size: 157px;
     padding-block-start: 4px;
+    font-size: 157px;
   }
 
   .header__subtitle {
@@ -432,20 +434,20 @@
     gap: 10px;
   }
 
-  .main__title--section-2 {
+  .main__title_section-2 {
     max-inline-size: 30%;
   }
 
-  .main__section--cols-2 {
+  .main__section_cols_2 {
     gap: 20px;
   }
 
-  .main__content_list--cols-3 {
+  .main__list_cols_3 {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
-  .main__section__gallery {
+  .main__section_gallery {
     gap: 20px;
   }
 }

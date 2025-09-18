@@ -12,7 +12,7 @@
   --main-bg-image: url(../images/cover-image-light.png);
   --main-content-element-text: #353430;
   --header-decor-color: #353430;
-  --header-menu-button-hover-color: rgba(50, 49, 45, 0.40);
+  --header-menu-button-hover-color: rgba(50, 49, 45, 0.4);
   --header-menu-button-color: #353430;
 }
 
@@ -21,6 +21,6 @@
 }
 
 .theme-light .header__rec::before {
-  display: none;
   content: none;
+  display: none;
 }
