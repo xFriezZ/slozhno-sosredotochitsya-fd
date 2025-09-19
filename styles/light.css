@@ -3,26 +3,49 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-@media (prefers-color-scheme: light) {
-  :root.theme-light {
-    --brand-color: #ffc2e6;
-    --accent-color: #ff8dcb;
-    --subtitle-text-color: #353430;
-    --main-bg-color: #fff1f7;
-    --main-bg-image: url(../images/cover-image-light.png);
-    --main-content-element-text: #353430;
-    --titel-decor-color: #353430;
-    --main-title-color: #353430;
-    --header-decor-color: #353430;
-    --header-menu-button-hover-color: rgba(50, 49, 45, 0.4);
-    --header-menu-button-color: #353430;
-  }
+:root.theme-light {
+  --brand-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --subtitle-text-color: #353430;
+  --main-bg-color: #fff1f7;
+  --main-bg-image: url(../images/cover-image-light.png);
+  --main-content-element-text: #353430;
+  --title-decor-color: #353430; /* проверь опечатку: не --titel- */
+  --main-title-color: #353430;
+  --header-decor-color: #353430;
+  --header-menu-button-hover-color: rgba(50,49,45,.4);
+  --header-menu-button-color: #353430;
+}
 
   .theme-light .header__rec {
     display: none;
   }
 
   .theme-light .header__rec::before {
+    content: none;
+    display: none;
+  }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --brand-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --subtitle-text-color: #353430;
+    --main-bg-color: #fff1f7;
+    --main-bg-image: url(../images/cover-image-light.png);
+    --main-content-element-text: #353430;
+    --title-decor-color: #353430;
+    --main-title-color: #353430;
+    --header-decor-color: #353430;
+    --header-menu-button-hover-color: rgba(50,49,45,.4);
+    --header-menu-button-color: #353430;
+  }
+
+  .header__rec {
+    display: none;
+  }
+
+  .header__rec::before {
     content: none;
     display: none;
   }
