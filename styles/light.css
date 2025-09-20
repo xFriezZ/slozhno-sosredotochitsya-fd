@@ -21,11 +21,6 @@
     display: none;
   }
 
-  .theme-light .header__rec::before {
-    content: none;
-    display: none;
-  }
-
 @media (prefers-color-scheme: light) {
   :root {
     --brand-color: #ffc2e6;
@@ -41,12 +36,7 @@
     --header-menu-button-color: #353430;
   }
 
-  .header__rec {
-    display: none;
-  }
-
-  .header__rec::before {
-    content: none;
+  :root:not(.theme-light):not(.theme-dark) .header__rec {
     display: none;
   }
 }

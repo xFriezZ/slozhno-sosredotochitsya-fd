@@ -72,9 +72,7 @@
   display: block;
   margin-inline-start: 10px;
   border-radius: 50%;
-  box-shadow:
-    0 0 4px var(--accent-color, #ff0070),
-    0 0 8px var(--accent-color, #ff0070);
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
   background-color: var(--accent-color, #ff0070);
   transform: translate(0, -50%);
   inline-size: 9px;
@@ -341,7 +339,7 @@
     grid-template-columns: 1fr 2fr;
   }
 
-  .main__content_row-2 {
+  .main__content_wide {
     grid-column: span 2;
     grid-row: 2;
   }
@@ -421,13 +419,12 @@
     gap: 10px;
   }
 
-  .main__content_row-2 {
+  .main__content_wide {
     padding-block-start: 10px;
   }
 
   .main__list_cols_3 {
     grid-template-columns: repeat(3, 1fr);
-    grid-row: 2;
     gap: 20px;
   }
 
